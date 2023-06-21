@@ -14,13 +14,12 @@ endfunction()
 
 function(add_ts_target target input_file output_file)
     add_custom_target(${target}
-        BYPRODUCTS ${output_file}
         COMMAND ${QT_CMAKE_EXPORT_NAMESPACE}::lupdate -locations relative -no-ui-lines -no-sort "@${input_file}" -ts ${output_file}
     )
 endfunction()
 
 function(add_ts_targets catalog)
-    cmake_parse_arguments(arg "" "" "DIRECTORIES" ${ARGN})
+    cmake_parse_arguments(arg "" "" "DIRECTORIES;EXCLUDE" ${ARGN})
     generate_empty_ts_file("${catalog}_en.ts")
     file(GLOB ts_files "${catalog}_*.ts")
 
@@ -50,6 +49,9 @@ function(add_ts_targets catalog)
     set(inclusion_regex "\\.h$|\\.cpp$|\\.hpp$|\\.cxx$|\\.cc$|\\.mm$|\\.qml$|\\.ui$")
     list(FILTER file_list INCLUDE REGEX "${inclusion_regex}")
     list(FILTER file_list EXCLUDE REGEX /doc/snippets/)
+    if (arg_EXCLUDE)
+        list(FILTER file_list EXCLUDE REGEX ${arg_EXCLUDE})
+    endif()
     list(JOIN file_list "\n" file_list_string)
 
     file(GENERATE
@@ -89,7 +91,8 @@ add_ts_targets(qtbase
         qtactiveqt/src # just 4 strings from QAxSelect
         qtimageformats/src # just 10 error messages from tga reader. uses bad context.
 )
-add_ts_targets(qtdeclarative DIRECTORIES qtdeclarative/src)
+add_ts_targets(qtdeclarative DIRECTORIES qtdeclarative/src
+               EXCLUDE declarative/src/quickcontrols2/designer)
 add_ts_targets(qtmultimedia DIRECTORIES qtmultimedia/src)
 #add_ts_targets(qtsvg DIRECTORIES qtsvg/src) # empty
 #add_ts_targets(qtwebkit DIRECTORIES qtwebkit) # messages from test browser only
@@ -130,6 +133,8 @@ add_dependencies(check-ts ts-all)
 add_custom_target(updateqm ALL)
 
 file(GLOB ts_files RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "*.ts")
+file(GLOB en_ts_files "${en_ts_file_dir}/*.ts")
+list(APPEND ts_files ${en_ts_files})
 
 if(QT_WILL_INSTALL)
     set(qm_output_dir "${QT_BUILD_DIR}/${INSTALL_TRANSLATIONSDIR}")
@@ -137,30 +142,13 @@ else()
     set(qm_output_dir "${QT_BUILD_INTERNALS_RELOCATABLE_INSTALL_PREFIX}/${INSTALL_TRANSLATIONSDIR}")
 endif()
 
-foreach(file IN LISTS ts_files)
-    string(REGEX REPLACE "\\.ts$" ".qm" qm_file ${file})
-    set(output_file "${qm_output_dir}/${qm_file}")
-    add_custom_target(updateqm-${file}
-        BYPRODUCTS ${output_file}
-        COMMAND "${CMAKE_COMMAND}" -E make_directory "${qm_output_dir}"
-        COMMAND ${QT_CMAKE_EXPORT_NAMESPACE}::lrelease "${CMAKE_CURRENT_SOURCE_DIR}/${file}" -qm "${output_file}"
-    )
-    qt_install(FILES ${output_file} DESTINATION "${INSTALL_TRANSLATIONSDIR}")
-    add_dependencies(updateqm updateqm-${file})
-endforeach()
-
-file(GLOB ts_files RELATIVE ${en_ts_file_dir} "${en_ts_file_dir}/*.ts")
-foreach(file IN LISTS ts_files)
-    string(REGEX REPLACE "\\.ts$" ".qm" qm_file ${file})
-    set(output_file "${qm_output_dir}/${qm_file}")
-    add_custom_target(updateqm-${file}
-        BYPRODUCTS ${output_file}
-        COMMAND ${QT_CMAKE_EXPORT_NAMESPACE}::lrelease "${en_ts_file_dir}/${file}" -qm "${output_file}"
-    )
-    qt_install(FILES ${output_file} DESTINATION "${INSTALL_TRANSLATIONSDIR}")
-    add_dependencies(updateqm updateqm-${file})
-endforeach()
-
+set_source_files_properties(${ts_files} PROPERTIES OUTPUT_LOCATION "${qm_output_dir}")
+qt_add_lrelease(updateqm
+    TS_FILES ${ts_files}
+    NO_GLOBAL_TARGET
+    QM_FILES_OUTPUT_VARIABLE qm_files
+    OPTIONS "-silent")
+qt_install(FILES ${qm_files} DESTINATION "${INSTALL_TRANSLATIONSDIR}")
 
 # Custom target to add modified ts files to git
 add_custom_target(stage-ts

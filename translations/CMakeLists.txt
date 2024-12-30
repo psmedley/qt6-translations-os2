@@ -38,8 +38,6 @@ function(add_ts_targets catalog)
     generate_empty_ts_file("${catalog}_en.ts")
     file(GLOB ts_files "${catalog}_*.ts")
 
-    list(PREPEND arg_EXCLUDE "/3rdparty/" "/doc/snippets/")
-
     set(languages)
     foreach(file IN LISTS ts_files)
         if(file MATCHES "([a-z][a-z](_[A-Z][A-Z])?).ts$")
@@ -60,9 +58,6 @@ function(add_ts_targets catalog)
             continue()
         endif()
         file(GLOB_RECURSE catalog_files "${dir_path}/**")
-        foreach(exclude_regex IN LISTS arg_EXCLUDE)
-            list(FILTER catalog_files EXCLUDE REGEX ${exclude_regex})
-        endforeach()
         list(APPEND file_list ${catalog_files})
     endforeach()
 
@@ -94,6 +89,10 @@ function(add_ts_targets catalog)
     set(source_files_list_file "${CMAKE_CURRENT_BINARY_DIR}/${catalog}_file_list.txt")
     set(inclusion_regex "\\.h$|\\.cpp$|\\.hpp$|\\.cxx$|\\.cc$|\\.mm$|\\.qml$|\\.ui$")
     list(FILTER file_list INCLUDE REGEX "${inclusion_regex}")
+    list(FILTER file_list EXCLUDE REGEX /doc/snippets/)
+    if (arg_EXCLUDE)
+        list(FILTER file_list EXCLUDE REGEX ${arg_EXCLUDE})
+    endif()
     list(JOIN file_list "\n" file_list_string)
 
     file(GENERATE
@@ -171,12 +170,6 @@ string(PREPEND catalogs_file_content "[\n")
 string(APPEND catalogs_file_content "\n]\n")
 file(WRITE "${catalogs_file}" "${catalogs_file_content}")
 
-# Create check target
-add_custom_target(check-ts
-    COMMAND perl check-ts.pl
-    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
-)
-add_dependencies(check-ts ts-all)
 
 # Update and install qm command
 add_custom_target(updateqm ALL)

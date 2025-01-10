@@ -625,8 +625,8 @@
 <context>
     <name>Designer</name>
     <message>
-        <source>Unable to launch %1.</source>
-        <translation type="vanished">A(z) %1 nem indítható el.</translation>
+        <source>%1 does not exist.</source>
+        <translation>A(z) %1 nem létezik.</translation>
     </message>
     <message>
         <source>Unable to launch %1: %2</source>
@@ -646,11 +646,19 @@
     </message>
     <message>
         <source>Qt Designer</source>
-        <translation>Qt Tervező</translation>
+        <translation type="vanished">Qt Tervező</translation>
+    </message>
+    <message>
+        <source>Qt Widgets Designer</source>
+        <translation>Qt Widgets Designer</translation>
     </message>
     <message>
         <source>This file cannot be read because the extra info extension failed to load.</source>
         <translation>Ez a fájl nem olvasható, mert a további információs kiterjesztést nem sikerült betölteni.</translation>
+    </message>
+    <message>
+        <source>Unable to launch %1.</source>
+        <translation type="vanished">A(z) %1 nem indítható el.</translation>
     </message>
 </context>
 <context>
@@ -1159,8 +1167,12 @@
         <translation>Űrlap</translation>
     </message>
     <message>
+        <source>Qt Widgets Designer</source>
+        <translation>Qt Widgets Designer</translation>
+    </message>
+    <message>
         <source>Qt Designer</source>
-        <translation>Qt Tervező</translation>
+        <translation type="vanished">Qt Tervező</translation>
     </message>
 </context>
 <context>
@@ -1437,12 +1449,6 @@ Ez következetlenséget jelez a felhasználói felület fájlban.</translation>
         <translation>A(z) %1 elmentve.</translation>
     </message>
     <message>
-        <source>%1 already exists.
-Do you want to replace it?</source>
-        <translation type="vanished">A(z) %1 már létezik.
-Szeretné lecserélni?</translation>
-    </message>
-    <message>
         <source>Edit Widgets</source>
         <translation>Felületi elemek szerkesztése</translation>
     </message>
@@ -1487,10 +1493,6 @@ Szeretné lecserélni?</translation>
         <translation>&amp;Kilépés</translation>
     </message>
     <message>
-        <source>View &amp;Code...</source>
-        <translation type="vanished">&amp;Kód megtekintése…</translation>
-    </message>
-    <message>
         <source>&amp;Minimize</source>
         <translation>&amp;Kis méret</translation>
     </message>
@@ -1523,8 +1525,16 @@ Szeretné lecserélni?</translation>
         <translation>CTRL+M</translation>
     </message>
     <message>
+        <source>Qt Widgets Designer</source>
+        <translation>Qt Widgets Designer</translation>
+    </message>
+    <message>
+        <source>The backup file %1 could not be written: %2</source>
+        <translation>A(z) %1 tartalékfájl írása nem sikerült: %2</translation>
+    </message>
+    <message>
         <source>Qt Designer &amp;Help</source>
-        <translation>Qt Tervező &amp;súgó</translation>
+        <translation type="vanished">Qt Tervező &amp;súgó</translation>
     </message>
     <message>
         <source>Current Widget Help</source>
@@ -1536,7 +1546,7 @@ Szeretné lecserélni?</translation>
     </message>
     <message>
         <source>About Qt Designer</source>
-        <translation>A Qt Tervező névjegye</translation>
+        <translation type="vanished">A Qt Tervező névjegye</translation>
     </message>
     <message>
         <source>About Qt</source>
@@ -1571,6 +1581,14 @@ Szeretné lecserélni?</translation>
         <translation>&amp;Python kód megtekintése…</translation>
     </message>
     <message>
+        <source>Qt Widgets Designer &amp;Help</source>
+        <translation>A Qt Widgets Designer &amp;súgója</translation>
+    </message>
+    <message>
+        <source>About Qt Widgets Designer</source>
+        <translation>A Qt Widgets Designer névjegye</translation>
+    </message>
+    <message>
         <source>Designer</source>
         <translation>Tervező</translation>
     </message>
@@ -1602,7 +1620,7 @@ Frissíteni szeretné a fájl helyét, vagy előállít egy új űrlapot?</trans
     </message>
     <message>
         <source>Qt Designer</source>
-        <translation>Qt Tervező</translation>
+        <translation type="vanished">Qt Tervező</translation>
     </message>
     <message>
         <source>Save Form?</source>
@@ -1639,14 +1657,6 @@ Reason: %2</source>
 Ok: %2</translation>
     </message>
     <message>
-        <source>It was not possible to write the entire file %1 to disk.
-Reason:%2
-Would you like to retry?</source>
-        <translation type="vanished">Nem volt lehetséges a teljes %1 fájlt kiírni a lemezre.
-Ok: %2
-Szeretné megpróbálni újra?</translation>
-    </message>
-    <message>
         <source>Assistant</source>
         <translation>Asszisztens</translation>
     </message>
@@ -1656,7 +1666,7 @@ Szeretné megpróbálni újra?</translation>
     </message>
     <message>
         <source>The backup file %1 could not be written.</source>
-        <translation>A(z) %1 biztonsági mentés fájlt nem sikerült kiírni.</translation>
+        <translation type="vanished">A(z) %1 biztonsági mentés fájlt nem sikerült kiírni.</translation>
     </message>
     <message>
         <source>The backup directory %1 could not be created.</source>
@@ -1664,7 +1674,7 @@ Szeretné megpróbálni újra?</translation>
     </message>
     <message>
         <source>The temporary backup directory %1 could not be created.</source>
-        <translation>A(z) %1 átmeneti biztonsági másolat könyvtárat nem sikerült létrehozni.</translation>
+        <translation type="vanished">A(z) %1 átmeneti biztonsági másolat könyvtárat nem sikerült létrehozni.</translation>
     </message>
     <message>
         <source>Preview failed</source>
@@ -1693,6 +1703,24 @@ Szeretné megpróbálni újra?</translation>
     <message>
         <source>Printed %1.</source>
         <translation>A(z) %1 kinyomtatva.</translation>
+    </message>
+    <message>
+        <source>%1 already exists.
+Do you want to replace it?</source>
+        <translation type="vanished">A(z) %1 már létezik.
+Szeretné lecserélni?</translation>
+    </message>
+    <message>
+        <source>View &amp;Code...</source>
+        <translation type="vanished">&amp;Kód megtekintése…</translation>
+    </message>
+    <message>
+        <source>It was not possible to write the entire file %1 to disk.
+Reason:%2
+Would you like to retry?</source>
+        <translation type="vanished">Nem volt lehetséges a teljes %1 fájlt kiírni a lemezre.
+Ok: %2
+Szeretné megpróbálni újra?</translation>
     </message>
 </context>
 <context>
@@ -2022,8 +2050,16 @@ Konténeroldalak csak az egyéni felületi elem domXml() metódusa által vissza
         <translation>A(z) %1 halmaz típusú tulajdonságot nem sikerült beolvasni.</translation>
     </message>
     <message>
+        <source>The value &quot;%1&quot; of the set-type property %2 could not be read.</source>
+        <translation>A(z) %2 halmaz típusú tulajdonság „%1” értékét nem sikerült olvasni.</translation>
+    </message>
+    <message>
         <source>The enumeration-type property %1 could not be read.</source>
         <translation>A(z) %1 felsorolás típusú tulajdonságot nem sikerült beolvasni.</translation>
+    </message>
+    <message>
+        <source>The value &quot;%1&quot; of the enum-type property %2 could not be read.</source>
+        <translation>A(z) %2 felsorolás típusú tulajdonság „%1” értékét nem sikerült olvasni.</translation>
     </message>
     <message>
         <source>Reading properties of the type %1 is not supported yet.</source>
@@ -2303,10 +2339,6 @@ Konténeroldalak csak az egyéni felületi elem domXml() metódusa által vissza
     </message>
     <message>
         <source>Bold</source>
-        <translation type="vanished">Félkövér</translation>
-    </message>
-    <message>
-        <source>Bold</source>
         <comment>Bold toggle</comment>
         <translation>Félkövér</translation>
     </message>
@@ -2329,6 +2361,10 @@ Konténeroldalak csak az egyéni felületi elem domXml() metódusa által vissza
     <message>
         <source>Weight</source>
         <translation>Vastagság</translation>
+    </message>
+    <message>
+        <source>Bold</source>
+        <translation type="vanished">Félkövér</translation>
     </message>
 </context>
 <context>
@@ -3349,24 +3385,32 @@ Szeretné felülírni a sablont?</translation>
         <translation>&lt;h3&gt;%1&lt;/h3&gt;&lt;br/&gt;&lt;br/&gt;%2. verzió</translation>
     </message>
     <message>
+        <source>Qt Widgets Designer</source>
+        <translation>Qt Widgets Designer</translation>
+    </message>
+    <message>
+        <source>&lt;br/&gt;Qt Widgets Designer is a graphical user interface designer for Qt applications.&lt;br/&gt;</source>
+        <translation>&lt;br/&gt;A Qt Widgets Designer egy tervező Qt alkalmazások grafikus felhasználói felületeihez.&lt;br/&gt;</translation>
+    </message>
+    <message>
+        <source>%1&lt;br/&gt;Copyright (C) The Qt Company Ltd. and other contributors.</source>
+        <translation>%1&lt;br/&gt;Copyright (C) A The Qt Company Ltd. és más közreműködők.</translation>
+    </message>
+    <message>
         <source>Qt Designer</source>
-        <translation>Qt Tervező</translation>
+        <translation type="vanished">Qt Tervező</translation>
     </message>
     <message>
         <source>&lt;br/&gt;Qt Designer is a graphical user interface designer for Qt applications.&lt;br/&gt;</source>
-        <translation>&lt;br/&gt;A Qt Tervező egy grafikus felhasználói felület tervező a Qt alkalmazásokhoz.&lt;br/&gt;</translation>
+        <translation type="vanished">&lt;br/&gt;A Qt Tervező egy grafikus felhasználói felület tervező a Qt alkalmazásokhoz.&lt;br/&gt;</translation>
     </message>
     <message>
         <source>%1&lt;br/&gt;Copyright (C) %2 The Qt Company Ltd.</source>
-        <translation>%1&lt;br/&gt;Copyright (C) %2 The Qt Company Ltd.</translation>
+        <translation type="vanished">%1&lt;br/&gt;Copyright (C) %2 The Qt Company Ltd.</translation>
     </message>
 </context>
 <context>
     <name>WidgetDataBase</name>
-    <message>
-        <source>A custom widget plugin whose class name (%1) matches that of an existing class has been found.</source>
-        <translation type="vanished">Egy egyéni felületi elem bővítmény, amely osztályneve (%1) megegyezik azzal, hogy egy létező osztály található.</translation>
-    </message>
     <message>
         <source>Abstract base class that cannot be instantiated. For promotion/custom widget usage only.</source>
         <translation>Absztrakt bázisosztály nem példányosítható. Csak előléptetés/egyéni felületi elem használatához.</translation>
@@ -3375,12 +3419,9 @@ Szeretné felülírni a sablont?</translation>
         <source>The file contains a custom widget &apos;%1&apos; whose base class (%2) differs from the current entry in the widget database (%3). The widget database is left unchanged.</source>
         <translation>A fájl egy egyéni felületi elemet tartalmaz („%1”), amelynek alaposztálya (%2) eltér a jelenlegi bejegyzéstől a felületi elem adatbázisban (%3). A felületi elem adatbázis változatlanul lett hagyva.</translation>
     </message>
-</context>
-<context>
-    <name>qdesigner_internal</name>
     <message>
-        <source>%1 Widget</source>
-        <translation type="vanished">%1 felületi elem</translation>
+        <source>A custom widget plugin whose class name (%1) matches that of an existing class has been found.</source>
+        <translation type="vanished">Egy egyéni felületi elem bővítmény, amely osztályneve (%1) megegyezik azzal, hogy egy létező osztály található.</translation>
     </message>
 </context>
 <context>
@@ -3579,10 +3620,6 @@ Szeretné felülírni a sablont?</translation>
         <translation>Összes másolása</translation>
     </message>
     <message>
-        <source>&amp;Find in Text...</source>
-        <translation type="vanished">Ke&amp;resés a szövegben…</translation>
-    </message>
-    <message>
         <source>A temporary form file could not be created in %1.</source>
         <translation>Egy átmeneti űrlapfájlt nem sikerült létrehozni ebben: %1.</translation>
     </message>
@@ -3591,16 +3628,8 @@ Szeretné felülírni a sablont?</translation>
         <translation>A(z) %1 átmeneti űrlapfájlt nem sikerült kiírni.</translation>
     </message>
     <message>
-        <source>%1 - [Code]</source>
-        <translation type="vanished">%1 – [Kód]</translation>
-    </message>
-    <message>
         <source>Save Code</source>
         <translation>Kód mentése</translation>
-    </message>
-    <message>
-        <source>Header Files (*.%1)</source>
-        <translation type="vanished">Fejlécfájlok (*.%1)</translation>
     </message>
     <message>
         <source>%1 - [%2 Code]</source>
@@ -3617,6 +3646,18 @@ Szeretné felülírni a sablont?</translation>
     <message>
         <source>%1 - Error</source>
         <translation>%1 – Hiba</translation>
+    </message>
+    <message>
+        <source>&amp;Find in Text...</source>
+        <translation type="vanished">Ke&amp;resés a szövegben…</translation>
+    </message>
+    <message>
+        <source>%1 - [Code]</source>
+        <translation type="vanished">%1 – [Kód]</translation>
+    </message>
+    <message>
+        <source>Header Files (*.%1)</source>
+        <translation type="vanished">Fejlécfájlok (*.%1)</translation>
     </message>
 </context>
 <context>
@@ -3757,16 +3798,8 @@ Szeretné felülírni a sablont?</translation>
 <context>
     <name>qdesigner_internal::DesignerPropertyManager</name>
     <message>
-        <source>translatable</source>
-        <translation type="vanished">lefordítható</translation>
-    </message>
-    <message>
         <source>disambiguation</source>
         <translation>egyértelműsítés</translation>
-    </message>
-    <message>
-        <source>comment</source>
-        <translation type="vanished">megjegyzés</translation>
     </message>
     <message>
         <source>id</source>
@@ -3816,7 +3849,7 @@ Szeretné felülírni a sablont?</translation>
     </message>
     <message>
         <source>[Theme] %1</source>
-        <translation>[Téma] %1</translation>
+        <translation type="vanished">[Téma] %1</translation>
     </message>
     <message>
         <source>Horizontal</source>
@@ -3829,6 +3862,10 @@ Szeretné felülírni a sablont?</translation>
     <message>
         <source>Theme</source>
         <translation>Téma</translation>
+    </message>
+    <message>
+        <source>XDG Theme</source>
+        <translation>XDG-téma</translation>
     </message>
     <message>
         <source>Normal Off</source>
@@ -3861,6 +3898,14 @@ Szeretné felülírni a sablont?</translation>
     <message>
         <source>Selected On</source>
         <translation>Kijelölt be</translation>
+    </message>
+    <message>
+        <source>translatable</source>
+        <translation type="vanished">lefordítható</translation>
+    </message>
+    <message>
+        <source>comment</source>
+        <translation type="vanished">megjegyzés</translation>
     </message>
 </context>
 <context>
@@ -4328,15 +4373,23 @@ Szeretné felülírni a sablont?</translation>
     <name>qdesigner_internal::IconThemeDialog</name>
     <message>
         <source>Set Icon From Theme</source>
-        <translation>Ikon beállítása témából</translation>
+        <translation type="vanished">Ikon beállítása témából</translation>
     </message>
     <message>
         <source>Select icon name from theme:</source>
-        <translation>Ikonnév kiválasztása témából:</translation>
+        <translation type="vanished">Ikonnév kiválasztása témából:</translation>
     </message>
     <message>
         <source>Input icon name from the current theme:</source>
         <translation type="vanished">Adja meg az ikon nevét a jelenlegi témából:</translation>
+    </message>
+    <message>
+        <source>Set Icon From XDG Theme</source>
+        <translation>Ikon beállítása XDG-témából</translation>
+    </message>
+    <message>
+        <source>Select icon name from XDG theme:</source>
+        <translation>Ikonnév kiválasztása XDG-témából:</translation>
     </message>
 </context>
 <context>
@@ -4494,7 +4547,7 @@ Szeretné felülírni a sablont?</translation>
     </message>
     <message>
         <source>Icon th&amp;eme:</source>
-        <translation>Ikon &amp;téma:</translation>
+        <translation type="vanished">Ikon &amp;téma:</translation>
     </message>
     <message>
         <source>&amp;Icon:</source>
@@ -4511,6 +4564,14 @@ Szeretné felülírni a sablont?</translation>
     <message>
         <source>&amp;Menu role:</source>
         <translation>&amp;Menü szerepkör:</translation>
+    </message>
+    <message>
+        <source>Icon &amp;XDG theme:</source>
+        <translation>Ikon &amp;XDG-témája:</translation>
+    </message>
+    <message>
+        <source>Icon &amp;theme:</source>
+        <translation>Ikon&amp;téma:</translation>
     </message>
 </context>
 <context>
@@ -4744,6 +4805,10 @@ Válasszon egy másik nevet.</translation>
         <translation>Betöltés…</translation>
     </message>
     <message>
+        <source>Preview (%1)</source>
+        <translation>Előnézet (%1)</translation>
+    </message>
+    <message>
         <source>Lighter</source>
         <translation>Világosabb</translation>
     </message>
@@ -4837,6 +4902,10 @@ Válasszon egy másik nevet.</translation>
         <translation>Ikon beállítása témából…</translation>
     </message>
     <message>
+        <source>Set Icon From XDG Theme...</source>
+        <translation>Ikon beállítása XDG-témából…</translation>
+    </message>
+    <message>
         <source>Copy Path</source>
         <translation>Útvonal másolása</translation>
     </message>
@@ -4851,6 +4920,14 @@ Válasszon egy másik nevet.</translation>
     <message>
         <source>[Theme] %1</source>
         <translation>[Téma] %1</translation>
+    </message>
+    <message>
+        <source>[Theme] %1 (missing)</source>
+        <translation>[Téma] %1 (hiányzik)</translation>
+    </message>
+    <message>
+        <source>%1 (fallback)</source>
+        <translation>%1 tartalék</translation>
     </message>
 </context>
 <context>
@@ -4887,12 +4964,20 @@ Válasszon egy másik nevet.</translation>
         <translation>Hibás bővítmények</translation>
     </message>
     <message>
+        <source>Qt Widgets Designer couldn&apos;t find any plugins</source>
+        <translation>A Qt Widgets Designer nem talált egyetlen bővítményt sem</translation>
+    </message>
+    <message>
+        <source>Qt Widgets Designer found the following plugins</source>
+        <translation>A Qt Widgets Designer a következő bővítményeket találta</translation>
+    </message>
+    <message>
         <source>Qt Designer couldn&apos;t find any plugins</source>
-        <translation>A Qt Tervező nem talált semmilyen bővítményt</translation>
+        <translation type="vanished">A Qt Tervező nem talált semmilyen bővítményt</translation>
     </message>
     <message>
         <source>Qt Designer found the following plugins</source>
-        <translation>A Qt Tervező a következő bővítményeket találta</translation>
+        <translation type="vanished">A Qt Tervező a következő bővítményeket találta</translation>
     </message>
     <message>
         <source>New custom widget plugins have been found.</source>
@@ -5013,24 +5098,9 @@ gyakran gyatra gyapjas jak apa gyapja.</translation>
         <translation>Nyomógomb</translation>
     </message>
     <message>
-        <source>ButtonGroup2</source>
-        <extracomment>Palette Editor Preview Widget</extracomment>
-        <translation type="vanished">2. gombcsoport</translation>
-    </message>
-    <message>
         <source>CheckBox1</source>
         <extracomment>Palette Editor Preview Widget</extracomment>
         <translation>1. jelölőnégyzet</translation>
-    </message>
-    <message>
-        <source>CheckBox2</source>
-        <extracomment>Palette Editor Preview Widget</extracomment>
-        <translation type="vanished">2. jelölőnégyzet</translation>
-    </message>
-    <message>
-        <source>ButtonGroup</source>
-        <extracomment>Palette Editor Preview Widget</extracomment>
-        <translation type="vanished">Gombcsoport</translation>
     </message>
     <message>
         <source>RadioButton1</source>
@@ -5139,6 +5209,21 @@ gyakran gyatra gyapjas jak apa gyapja.</translation>
     <message>
         <source>Checkable</source>
         <translation>Bejelölhető</translation>
+    </message>
+    <message>
+        <source>ButtonGroup2</source>
+        <extracomment>Palette Editor Preview Widget</extracomment>
+        <translation type="vanished">2. gombcsoport</translation>
+    </message>
+    <message>
+        <source>CheckBox2</source>
+        <extracomment>Palette Editor Preview Widget</extracomment>
+        <translation type="vanished">2. jelölőnégyzet</translation>
+    </message>
+    <message>
+        <source>ButtonGroup</source>
+        <extracomment>Palette Editor Preview Widget</extracomment>
+        <translation type="vanished">Gombcsoport</translation>
     </message>
 </context>
 <context>
@@ -5403,15 +5488,15 @@ Osztály: %2</translation>
         <source>Edit WhatsThis</source>
         <translation>„Mi ez?” szerkesztése</translation>
     </message>
-    <message>
-        <source>no signals available</source>
-        <translation type="vanished">nincsenek elérhető jelzések</translation>
-    </message>
     <message numerus="yes">
         <source>Set size constraint on %n widget(s)</source>
         <translation>
             <numerusform>Méretkorlátozás beállítása %n felületi elemen</numerusform>
         </translation>
+    </message>
+    <message>
+        <source>no signals available</source>
+        <translation type="vanished">nincsenek elérhető jelzések</translation>
     </message>
 </context>
 <context>
@@ -6119,7 +6204,7 @@ Ez a felhasználói felület fájlban lévő következetlenséget jelzi.</transl
     <name>qdesigner_internal::WidgetDataBase</name>
     <message>
         <source>A custom widget plugin whose class name (%1) matches that of an existing class has been found.</source>
-        <translation>Egy egyéni felületi elem bővítmény, amely osztályneve (%1) megegyezik azzal, hogy egy létező osztály található.</translation>
+        <translation>Egy egyéni felületielem-bővítmény, amely osztályneve (%1) megegyezik azzal, hogy egy létező osztály található.</translation>
     </message>
 </context>
 <context>
@@ -6134,6 +6219,24 @@ Ez a felhasználói felület fájlban lévő következetlenséget jelzi.</transl
     <message>
         <source>3DView</source>
         <translation>3D nézet</translation>
+    </message>
+</context>
+<context>
+    <name>qdesigner_internal</name>
+    <message>
+        <source>%1 Widget</source>
+        <translation type="vanished">%1 felületi elem</translation>
+    </message>
+</context>
+<context>
+    <name>qdesigner_internal::IconThemeEnumDialog</name>
+    <message>
+        <source>Set Icon From Theme</source>
+        <translation>Ikon beállítása témából</translation>
+    </message>
+    <message>
+        <source>Select icon name from theme:</source>
+        <translation>Ikonnév kiválasztása témából:</translation>
     </message>
 </context>
 </TS>

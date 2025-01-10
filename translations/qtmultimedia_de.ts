@@ -104,6 +104,10 @@
         <translation>Fehlerhafter Status der Medien-Session.</translation>
     </message>
     <message>
+        <source>Invalid stream data.</source>
+        <translation>Ungültige Daten aus Datenstrom.</translation>
+    </message>
+    <message>
         <source>Media session serious error.</source>
         <translation>Kritischer Fehler der Medien-Session.</translation>
     </message>
@@ -315,6 +319,10 @@
         <source>No video or audio input</source>
         <translation>Kein Video- oder Audiosignal</translation>
     </message>
+    <message>
+        <source>Cannot open the output location for writing</source>
+        <translation>Das Ausgabeziel kann nicht zum Schreiben geöffnet werden</translation>
+    </message>
 </context>
 <context>
     <name>QMediaMetaData</name>
@@ -430,6 +438,10 @@
         <source>Lead performer</source>
         <translation>Hauptinterpret</translation>
     </message>
+    <message>
+        <source>Has HDR content</source>
+        <translation>Hat HDR-Inhalt</translation>
+    </message>
 </context>
 <context>
     <name>Decoder</name>
@@ -521,13 +533,6 @@
     <message>
         <source>No camera available.</source>
         <translation>Es ist keine Kamera verfügbar.</translation>
-    </message>
-</context>
-<context>
-    <name>QV4L2Camera</name>
-    <message>
-        <source>Camera is in use.</source>
-        <translation>Kamera bereits in Verwendung.</translation>
     </message>
 </context>
 </TS>

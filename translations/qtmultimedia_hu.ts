@@ -108,6 +108,10 @@
         <translation>Média-munkamenet állapothiba.</translation>
     </message>
     <message>
+        <source>Invalid stream data.</source>
+        <translation>Érvénytelen adatfolyamadatok.</translation>
+    </message>
+    <message>
         <source>Media session serious error.</source>
         <translation>Komoly média-munkamenet hiba.</translation>
     </message>
@@ -193,6 +197,10 @@
     <message>
         <source>No video or audio input</source>
         <translation>Nincs video- vagy hangbemenet</translation>
+    </message>
+    <message>
+        <source>Cannot open the output location for writing</source>
+        <translation>Nem lehet megnyitni a kimeneti helyet íráshoz</translation>
     </message>
     <message>
         <source>No camera or audio input</source>
@@ -312,6 +320,10 @@
     <message>
         <source>Lead performer</source>
         <translation>Vezető előadó</translation>
+    </message>
+    <message>
+        <source>Has HDR content</source>
+        <translation>HDR tartalma van</translation>
     </message>
 </context>
 <context>
@@ -441,13 +453,6 @@
     </message>
 </context>
 <context>
-    <name>QV4L2Camera</name>
-    <message>
-        <source>Camera is in use.</source>
-        <translation>A kamera használatban van.</translation>
-    </message>
-</context>
-<context>
     <name>QGstreamerAudioDecoder</name>
     <message>
         <source>Cannot play stream of type: &lt;unknown&gt;</source>
@@ -528,6 +533,13 @@
     <message>
         <source>Recording error</source>
         <translation>Rögzítési hiba</translation>
+    </message>
+</context>
+<context>
+    <name>QV4L2Camera</name>
+    <message>
+        <source>Camera is in use.</source>
+        <translation type="vanished">A kamera használatban van.</translation>
     </message>
 </context>
 </TS>

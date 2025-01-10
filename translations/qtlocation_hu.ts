@@ -478,10 +478,10 @@ Látogassa meg a következő oldalt: https://www.mapbox.com</translation>
         <translation>A(z) „%1” index kívül esik a tartományon</translation>
     </message>
     <message>
-        <source>Qt Location requires app_id and token parameters.
+        <source>Qt Location requires apiKey parameter.
 Please register at https://developer.here.com/ to get your personal application credentials.</source>
-        <translation>A Qt helymeghatározáshoz az app_id és a token paraméterek szükségesek.
-Regisztráljon a https://developer.here.com/ címen a személyes alkalmazás hitelesítési adatok beszerzéséhez.</translation>
+        <translation>A Qt helymeghatározáshoz apiKey paraméter szükséges.
+Kérjük, regisztráljon a https://developer.here.com/ címen, hogy megkapja a személyes alkalmazáshitelesítési adatait.</translation>
     </message>
     <message>
         <source>Saving places is not supported.</source>
@@ -514,6 +514,12 @@ Regisztráljon a https://developer.here.com/ címen a személyes alkalmazás hit
     <message>
         <source>The response from the service was not in a recognizable format.</source>
         <translation>A szolgáltatástól érkező válasz nem felismerhető formátumban volt.</translation>
+    </message>
+    <message>
+        <source>Qt Location requires app_id and token parameters.
+Please register at https://developer.here.com/ to get your personal application credentials.</source>
+        <translation type="vanished">A Qt helymeghatározáshoz az app_id és a token paraméterek szükségesek.
+Kérjük, regisztráljon a https://developer.here.com/ címen, hogy megkapja a személyes alkalmazáshitelesítési adatait.</translation>
     </message>
 </context>
 <context>

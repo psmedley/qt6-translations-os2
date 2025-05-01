@@ -229,3 +229,22 @@ add_custom_target(stage-ts
     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
     COMMAND_EXPAND_LISTS
 )
+
+qt_internal_add_sbom(Translations
+    TYPE QT_TRANSLATIONS
+    QT_LICENSE_ID "QT_COMMERCIAL_OR_BSD3"
+)
+
+qt_internal_sbom_add_files(Translations
+    FILES "${qm_files}"
+    SOURCE_FILES_PER_INPUT_FILE "${ts_files}"
+    FILE_TYPE "QT_TRANSLATION"
+    INSTALL_PATH "${INSTALL_TRANSLATIONSDIR}"
+)
+
+qt_internal_sbom_add_files(Translations
+    FILES "${catalogs_file}"
+    SOURCE_FILES "${catalogs_file}"
+    FILE_TYPE "QT_TRANSLATIONS_CATALOG"
+    INSTALL_PATH "${catalogs_file_install_dir}"
+)

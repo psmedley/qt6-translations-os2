@@ -179,21 +179,6 @@
     </message>
 </context>
 <context>
-    <name>AssistantClient</name>
-    <message>
-        <source>Unable to send request: Assistant is not responding.</source>
-        <translation>Fehler beim Senden einer Anforderung: Das Programm Assistant antwortet nicht.</translation>
-    </message>
-    <message>
-        <source>The binary &apos;%1&apos; does not exist.</source>
-        <translation>Die ausführbare Datei &apos;%1&apos; existiert nicht.</translation>
-    </message>
-    <message>
-        <source>Unable to launch assistant (%1).</source>
-        <translation>Das Programm Assistant kann nicht gestartet werden (%1).</translation>
-    </message>
-</context>
-<context>
     <name>BrushPropertyManager</name>
     <message>
         <source>Style</source>
@@ -1054,36 +1039,20 @@
         <source>Connect slots by name</source>
         <translation>Slots automatisch nach Name verbinden</translation>
     </message>
+    <message>
+        <source>ID-based label:</source>
+        <translation>Label für ID-basierte Übersetzung:</translation>
+    </message>
+    <message>
+        <source>Enter a label name to group id based translations of the form (optional)</source>
+        <translation>Geben Sie ein Label ein, um ID-basierte Übersetzungen des Formulars zu gruppieren (optional)</translation>
+    </message>
 </context>
 <context>
     <name>IconSelector</name>
     <message>
-        <source>The pixmap file &apos;%1&apos; cannot be read.</source>
-        <translation>Die Pixmap-Datei &apos;%1&apos; kann nicht gelesen werden.</translation>
-    </message>
-    <message>
-        <source>The file &apos;%1&apos; does not appear to be a valid pixmap file: %2</source>
-        <translation>Die Datei &apos;%1&apos; ist keine gültige Pixmap-Datei: %2</translation>
-    </message>
-    <message>
-        <source>The file &apos;%1&apos; could not be read: %2</source>
-        <translation>Die Datei &apos;%1&apos; konnte nicht gelesen werden: %2</translation>
-    </message>
-    <message>
         <source>All Pixmaps (</source>
         <translation>Alle Pixmap-Dateien (</translation>
-    </message>
-    <message>
-        <source>Choose a Pixmap</source>
-        <translation>Pixmap-Datei auswählen</translation>
-    </message>
-    <message>
-        <source>Pixmap Read Error</source>
-        <translation>Fehler beim Lesen der Pixmap</translation>
-    </message>
-    <message>
-        <source>...</source>
-        <translation>...</translation>
     </message>
     <message>
         <source>Normal Off</source>
@@ -1116,22 +1085,6 @@
     <message>
         <source>Selected On</source>
         <translation>Ausgewählt, ein</translation>
-    </message>
-    <message>
-        <source>Choose Resource...</source>
-        <translation>Ressource auswählen...</translation>
-    </message>
-    <message>
-        <source>Choose File...</source>
-        <translation>Datei auswählen...</translation>
-    </message>
-    <message>
-        <source>Reset</source>
-        <translation>Zurücksetzen</translation>
-    </message>
-    <message>
-        <source>Reset All</source>
-        <translation>Alle zurücksetzen</translation>
     </message>
 </context>
 <context>
@@ -1334,10 +1287,6 @@ This indicates an inconsistency in the ui-file.</source>
     <message>
         <source>Empty widget item in %1 &apos;%2&apos;.</source>
         <translation>Leeres Widget-Item in %1 &apos;%2&apos;.</translation>
-    </message>
-    <message>
-        <source>Flags property are not supported yet.</source>
-        <translation>Eigenschaften des Typs &quot;Flag&quot; werden nicht unterstützt.</translation>
     </message>
     <message>
         <source>While applying tab stops: The widget &apos;%1&apos; could not be found.</source>
@@ -3720,6 +3669,14 @@ Möchten Sie sie überschreiben?</translation>
 <context>
     <name>qdesigner_internal::DesignerPropertyManager</name>
     <message>
+        <source>translatable</source>
+        <translation>Übersetzbar</translation>
+    </message>
+    <message>
+        <source>comment</source>
+        <translation>Kommentar</translation>
+    </message>
+    <message>
         <source>id</source>
         <translation>id</translation>
     </message>
@@ -4512,20 +4469,14 @@ Please select another name.</source>
         <translation>Vorgabe</translation>
     </message>
     <message>
-        <source>QVGA portrait (240x320)</source>
-        <translation>QVGA Hochformat (240x320)</translation>
+        <source>%1 portrait (%2x%3)</source>
+        <extracomment>Standard screen size: %1 Name, %2 screen width, %3 screen height</extracomment>
+        <translation>%1 Hochformat (%2x%3)</translation>
     </message>
     <message>
-        <source>QVGA landscape (320x240)</source>
-        <translation>QVGA Querformat (320x240)</translation>
-    </message>
-    <message>
-        <source>VGA portrait (480x640)</source>
-        <translation>VGA Hochformat (480x640)</translation>
-    </message>
-    <message>
-        <source>VGA landscape (640x480)</source>
-        <translation>VGA Querformat (640x480)</translation>
+        <source>%1 landscape (%2x%3)</source>
+        <extracomment>Standard screen size: %1 Name, %2 screen width, %3 screen height</extracomment>
+        <translation>%1 Querformat (%2x%3)</translation>
     </message>
     <message>
         <source>Widgets</source>
@@ -5164,6 +5115,10 @@ ate the goose who was loose.</translation>
 Class: %2</source>
         <translation>Objekt: %1
 Klasse: %2</translation>
+    </message>
+    <message>
+        <source>Deprecated since Qt %1: %2</source>
+        <translation>Deprecated seit Qt %1: %2</translation>
     </message>
     <message>
         <source>Sorting</source>
@@ -5932,6 +5887,11 @@ Klasse: %2</translation>
 <context>
     <name>qdesigner_internal::WidgetDataBase</name>
     <message>
+        <source>text</source>
+        <extracomment>Widget Box ToolTip of QAbstractButton-derived classes</extracomment>
+        <translation>Text</translation>
+    </message>
+    <message>
         <source>A custom widget plugin whose class name (%1) matches that of an existing class has been found.</source>
         <translation>Es wurde ein Plugin gefunden, das ein benutzerdefiniertes Widget enthält, dessen Klassenname (%1) einer existierenden Klasse entspricht.</translation>
     </message>
@@ -6052,17 +6012,6 @@ This indicates an inconsistency in the ui-file.</source>
     </message>
 </context>
 <context>
-    <name>qdesigner_internal::PropertySheetValue</name>
-    <message>
-        <source>translatable</source>
-        <translation>Übersetzbar</translation>
-    </message>
-    <message>
-        <source>comment</source>
-        <translation>Kommentar</translation>
-    </message>
-</context>
-<context>
     <name>qdesigner_internal::IconThemeEnumDialog</name>
     <message>
         <source>Set Icon From Theme</source>
@@ -6071,6 +6020,49 @@ This indicates an inconsistency in the ui-file.</source>
     <message>
         <source>Select icon name from theme:</source>
         <translation>Icon-Namen aus aktuellem Thema wählen:</translation>
+    </message>
+</context>
+<context>
+    <name>qdesigner_internal::IconSelector</name>
+    <message>
+        <source>The pixmap file &apos;%1&apos; cannot be read.</source>
+        <translation>Die Pixmap-Datei &apos;%1&apos; kann nicht gelesen werden.</translation>
+    </message>
+    <message>
+        <source>The file &apos;%1&apos; does not appear to be a valid pixmap file: %2</source>
+        <translation>Die Datei &apos;%1&apos; ist keine gültige Pixmap-Datei: %2</translation>
+    </message>
+    <message>
+        <source>The file &apos;%1&apos; could not be read: %2</source>
+        <translation>Die Datei &apos;%1&apos; konnte nicht gelesen werden: %2</translation>
+    </message>
+    <message>
+        <source>Choose a Pixmap</source>
+        <translation>Pixmap-Datei auswählen</translation>
+    </message>
+    <message>
+        <source>Pixmap Read Error</source>
+        <translation>Fehler beim Lesen der Pixmap</translation>
+    </message>
+    <message>
+        <source>...</source>
+        <translation>...</translation>
+    </message>
+    <message>
+        <source>Choose Resource...</source>
+        <translation>Ressource auswählen...</translation>
+    </message>
+    <message>
+        <source>Choose File...</source>
+        <translation>Datei auswählen...</translation>
+    </message>
+    <message>
+        <source>Reset</source>
+        <translation>Zurücksetzen</translation>
+    </message>
+    <message>
+        <source>Reset All</source>
+        <translation>Alle zurücksetzen</translation>
     </message>
 </context>
 </TS>
